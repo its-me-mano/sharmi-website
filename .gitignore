@@ -19,6 +19,9 @@ build/
 .env.*
 !.env.example
 
+# Preview / screenshots (generated locally, not part of the site)
+.preview/
+
 # Logs
 *.log
 npm-debug.log*
