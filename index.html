@@ -1020,15 +1020,20 @@
 
 /* controls */
 .cake-controls{
+  position:absolute;
+  left:0; right:0;
+  bottom:clamp(74px, 13vh, 140px);
+  z-index:5;
   display:flex;
   gap:14px;
   flex-wrap:wrap;
   justify-content:center;
   opacity:0;
+  pointer-events:none;
   transform:translateY(10px);
   transition:opacity .5s ease .2s, transform .5s ease .2s;
 }
-.cake-controls.cake-show{ opacity:1; transform:none; }
+.cake-controls.cake-show{ opacity:1; pointer-events:auto; transform:none; }
 .cake-btn{
   font-family:var(--sans,'Outfit',sans-serif);
   font-weight:600;
@@ -1052,6 +1057,10 @@
 }
 
 .cake-made{
+  position:absolute;
+  left:0; right:0;
+  bottom:clamp(26px, 6vh, 58px);
+  z-index:5;
   font-family:var(--script,'Great Vibes',cursive);
   font-size:clamp(20px,3.2vw,34px);
   color:#cf5a86;
@@ -3596,8 +3605,8 @@ window.Scene_cake = function Scene_cake(){
     }
   }
 
-  var wrap = h('div', {'class':'cake-wrap'}, eyebrowEl, promptEl, stageEl, controlsEl, madeEl);
-  var section = h('section', {'class':'scene cake-bright', 'data-screen-label':'Cut the cake'}, decor, wrap, finaleEl);
+  var wrap = h('div', {'class':'cake-wrap'}, eyebrowEl, promptEl, stageEl);
+  var section = h('section', {'class':'scene cake-bright', 'data-screen-label':'Cut the cake'}, decor, wrap, finaleEl, controlsEl, madeEl);
 
   // ---------- wire events ----------
   function onCakeActivate(ev){
