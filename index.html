@@ -2269,9 +2269,10 @@
   function LetterScene() {
     refs.letterName = h('span', {}, T.name);
     var body = h('div', { class: 'letter-body' },
-      h('p', {}, h('span', { class: 'drop' }, 'H'), "appy birthday, my Sweetie pie. I'm not good with words, so I made this for you instead."),
-      h('p', {}, "The way you care. The way you smile at me. The way you take care of me — I notice all of it. And I'll try to do the same for you, in my own way, for the rest of my life."),
-      h('p', {}, "I love you, ", refs.letterName, " — today, and every day after this one."),
+      h('p', {}, h('span', { class: 'drop' }, 'H'), "appy birthday, my Sweetie pie. I'm not good with words, so I made this whole thing for you instead."),
+      h('p', {}, "The way you care. The way you smile at me. The way you take care of me. I notice every bit of it, even when I don't say it out loud. And I promise I'll keep doing the same for you, in my own way, for the rest of my life."),
+      h('p', {}, "We go out, we explore new places, we laugh, we enjoy every moment together. And it was never really about the places. It was always you and me. That is the memory of our whole life."),
+      h('p', {}, "So here's to us, ", refs.letterName, ". To every road still ahead, and every birthday I get to spend right beside you. I love you, today and every single day after this one."),
       h('div', { class: 'signed' }, 'Your Mano'));
     return h('section', { class: 'scene', 'data-screen-label': 'Letter' },
       h('div', { class: 'section-head reveal' },
@@ -2626,7 +2627,7 @@ window.Scene_location = function Scene_location(){
 
   var label = h('div', { class: 'loc-label' },
     h('div', { class: 'loc-kicker' }, 'our place'),
-    h('div', { class: 'loc-line', 'html': 'we didn\'t create memory in the places — we are the <span class="loc-em">memories</span> of our life' }),
+    h('div', { class: 'loc-line', 'html': 'we explore the places, we live the moments, and we are the <span class="loc-em">memories</span> of our life' }),
     h('div', { class: 'loc-rule' })
   );
 
@@ -3400,7 +3401,7 @@ window.Scene_cake = function Scene_cake(){
         window.fireConfetti({count:24, originX:clamp01((r.left+r.width/2)/vw()), originY:clamp01((r.top+r.height*0.28)/vh()), spread:55, power:.5});
       }
     }catch(e){}
-    setPrompt('Now cut the cake — drag the knife down');
+    setPrompt('Now cut the cake. Drag the knife down');
     later(function(){ showKnife(); }, 700);
   }
 
