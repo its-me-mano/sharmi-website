@@ -2205,15 +2205,15 @@
   <script>
   /* ---------- Content + tweakable defaults ---------- */
   var DEFAULTS = {
-    name: 'Sharmila',
+    name: 'Sharmi',
     mode: 'tilt',
     greeting: 'Happy Birthday',
-    subtitle: 'To the most beautiful part of every day of mine.',
+    subtitle: "I'm not good with words, so I made this for you ♡",
     accent: '#e8c879',
     confettiRain: false,
     giftNo: 1,
     giftTotal: 25,
-    tagLine: 'with all my love'
+    tagLine: 'love, your Mano'
   };
   var PHOTOS = [
     { id: 'ph-1', date: 'the beginning', caption: 'where it all began', placeholder: 'Drop a photo' },
@@ -2250,7 +2250,7 @@
     refs.heroSub = h('p', { class: 'hero-sub' }, T.subtitle);
     return h('section', { class: 'scene hero-scene', 'data-screen-label': 'Intro' },
       h('div', { class: 'hero' },
-        h('span', { class: 'eyebrow hero-kicker' }, 'A little something, just for you'),
+        h('span', { class: 'eyebrow hero-kicker' }, 'For my Sweetie pie'),
         hb, refs.heroName, h('div', { class: 'hero-rule' }), refs.heroSub),
       h('div', { class: 'scroll-cue' }, h('div', { class: 'dot' }), h('span', {}, 'scroll')));
   }
@@ -2269,11 +2269,10 @@
   function LetterScene() {
     refs.letterName = h('span', {}, T.name);
     var body = h('div', { class: 'letter-body' },
-      h('p', {}, h('span', { class: 'drop' }, 'M'), 'y dearest ', refs.letterName,
-        ", today the whole world gets a little brighter — because it's the day it got you. Thank you for the laughter, the patience, the quiet ordinary moments that somehow became my favourite ones."),
-      h('p', {}, "Every photo here is a small piece of how lucky I feel. Here's to more sunsets, more silly arguments over nothing, and a lifetime of birthdays I get to spend beside you."),
-      h('p', {}, "Happy birthday, my love. Make a wish — I'll spend forever helping it come true."),
-      h('div', { class: 'signed' }, 'Always yours'));
+      h('p', {}, h('span', { class: 'drop' }, 'H'), "appy birthday, my Sweetie pie. I'm not good with words, so I made this for you instead."),
+      h('p', {}, "The way you care. The way you smile at me. The way you take care of me — I notice all of it. And I'll try to do the same for you, in my own way, for the rest of my life."),
+      h('p', {}, "I love you, ", refs.letterName, " — today, and every day after this one."),
+      h('div', { class: 'signed' }, 'Your Mano'));
     return h('section', { class: 'scene', 'data-screen-label': 'Letter' },
       h('div', { class: 'section-head reveal' },
         h('div', { class: 'divider' }, h('span', {}, '✦')),
@@ -2626,8 +2625,8 @@ window.Scene_location = function Scene_location(){
   void name; void (window.PHOTOS || []);
 
   var label = h('div', { class: 'loc-label' },
-    h('div', { class: 'loc-kicker' }, 'where our story lives'),
-    h('div', { class: 'loc-line', 'html': 'every story of ours begins right <span class="loc-em">here</span>' }),
+    h('div', { class: 'loc-kicker' }, 'our place'),
+    h('div', { class: 'loc-line', 'html': 'we didn\'t make our memories in places — we are the <span class="loc-em">memories</span> of our life' }),
     h('div', { class: 'loc-rule' })
   );
 
@@ -3595,7 +3594,7 @@ window.Scene_cake = function Scene_cake(){
   var fwBtn = h('button', {'class':'cake-btn cake-ghost', type:'button', onClick:function(ev){ if(ev&&ev.stopPropagation) ev.stopPropagation(); celebrate(); }}, 'More fireworks');
   var controlsEl = h('div', {'class':'cake-controls'}, againBtn, fwBtn);
 
-  var madeEl = h('div', {'class':'cake-made'}, 'made with love, for you ♡');
+  var madeEl = h('div', {'class':'cake-made'}, 'made for you, my Sweetie pie ♡');
 
   var decor = h('div', {'class':'cake-decor', 'aria-hidden':'true'});
   if(!prefersReduced){
