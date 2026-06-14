@@ -2,11 +2,13 @@
 
 A personal website project — a birthday surprise for Sharmila. 🎉
 
-A single self-contained page: a gift you tap to unwrap, an animated "Happy
-Birthday" hero, a 3D photo gallery (drag your own photos in), a love letter,
-and a make-a-wish candle you blow out with your mic. Built for a projector —
-arrow keys / a presentation clicker glide scene to scene, `F` goes fullscreen,
-and the fonts are embedded so it works with no internet.
+A single self-contained page that plays as a guided journey you drive with a
+clicker: tap to unwrap the gift → the "Happy Birthday" hero → a fly-down to
+"our place" → doors swing open → a party room of balloons and your hanging
+photos (with a fireworks welcome) → a love letter → a bright cake you cut to
+set off fireworks. Built for a projector — arrow keys / a presentation clicker
+glide scene to scene, `F` goes fullscreen, `M` toggles music, and the fonts +
+everything else are embedded so it works with no internet.
 
 ## Contents
 
@@ -24,10 +26,19 @@ python3 -m http.server 8000   # then visit http://localhost:8000
 
 - **→ / Space / clicker** — next scene (first press unwraps the gift)
 - **← / ↑** — previous scene
-- **F** — toggle fullscreen
-- **T** — open the Tweaks panel (name, gift number, gallery effect, colors…)
+- **F** — toggle fullscreen · **M** — music on/off
+- **T** — open the Tweaks panel (name, gift number, greeting, colors…)
 
-Drop photos onto any gold frame; they save in the browser (localStorage).
+In the party room, drop your photos onto the hanging frames (they save in the
+browser via localStorage). In the finale, tap the cake to blow out the candles,
+then drag the knife down to cut it — and tap anywhere for fireworks.
+
+## Add your song
+
+Open `index.html`, find `var SRC = '';` near the top of the script, and set it to
+your audio — a filename like `'music.mp3'` next to this file, or a
+`data:audio/mpeg;base64,…` URI to keep everything in one file. It fades in on the
+gift unwrap; `M` mutes.
 
 ## Deploying
 
